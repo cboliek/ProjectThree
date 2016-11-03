@@ -1,4 +1,5 @@
-[
+{
+  "datatables":[
   {
     "Race": "White",
     "Residence City": "SOUTH WINDSOR",
@@ -918,3 +919,4 @@
     "Other": ""
   }
 ]
+}
