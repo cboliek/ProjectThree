@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Project3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learning Charting">
+  <meta name="author" content="Caroline Boliek">
+
+
+  <link href="css/c3.css" rel="stylesheet" type"text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Los Angeles Times</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Local</a></li>
+        <li><a href="#">California</a></li>
+        <li><a href="#">Sports</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="everything">
+    <div class="row">
+      <div class="col-md-4 col-xs-4">
+          <img class ="twitterblue" src="images/twitter-icon-blue.png" alt="blue">
+      </div>
+      <div class="col-md-4 col-xs-4">
+          <img class="facebookblue" src="images/facebook-icon-blue.png" alt="bluefb">
+      </div>
+      <div class="col-md-4 col-xs-4">
+          <img class="mailblue" src="images/mail-icon-blue.png" alt="bluemail">
+      </div>
+    </div>
+    <div class="row">
+      <div class= "col-md-12">
+        <h1>Accidental deaths due to overdoses in CT in January 2015</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3> Data.gov reported all the cases on file of deaths in Connecticut due to overdoses. The information presented below tracks ages, locations, substances, and other factors in these peoples' deaths.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h4> by Caroline Boliek with info from Data.gov </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h5>November 7, 2016</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <p>this is the map of the areas where the deaths occurred</p>
+      </div>
+      <div class="col-md-4">
+        <p>This is my description of the map that will be to the left</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 first">
+        <div id="chart"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="chartLine"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="chartPie"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="chartDatatable">Hey this is my data table</div>
+      </div>
+    </div>
+
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Race</th>
+                <th>Residence City</th>
+                <th>Injury Place</th>
+                <th>Heroin</th>
+                <th>Cocaine</th>
+                <th>Fethanyl</th>
+                <th>Oxycodone</th>
+                <th>Oxymorphone</th>
+                <th>EtOH</th>
+                <th>Hydrocodone</th>
+                <th>Benzodiazepine</th>
+                <th>Methadone</th>
+                <th>Amphet</th>
+                <th>Tramad</th>
+                <th>Morphine</th>
+                <th>Other</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+              <th>Race</th>
+              <th>Residence City</th>
+              <th>Injury Place</th>
+              <th>Heroin</th>
+              <th>Cocaine</th>
+              <th>Fethanyl</th>
+              <th>Oxycodone</th>
+              <th>Oxymorphone</th>
+              <th>EtOH</th>
+              <th>Hydrocodone</th>
+              <th>Benzodiazepine</th>
+              <th>Methadone</th>
+              <th>Amphet</th>
+              <th>Tramad</th>
+              <th>Morphine</th>
+              <th>Other</th>
+
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http:////cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  </div>
+</div>
+
+
+  <!-- <button type="button" onclick="clickHide()">Hide data 1</button>
+  <button type="button" onclick="clickShow()">Show data 1</button> -->
+
+
+  <!-- <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> -->
+  <script src="js/d3.min.js" charset="utf-8"></script>
+  <script src="js/c3.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
