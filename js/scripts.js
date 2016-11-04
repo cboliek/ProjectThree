@@ -1,7 +1,9 @@
 var deathAges;
-var deathCities;
-var deathDates;
+var residenceCities;
+var deathRaces;
 var deathDrugs;
+var injuryPlaces;
+
 
 
 
@@ -9,8 +11,9 @@ $( document ).ready(function() {
   console.log( "ready!" );
   loadData("age.json");
   loadData3("drugs.json");
-  loadData("deathcity.json");
+  loadData4("ResidenceCity.json");
   loadData2("race.json");
+  loadData5("InjuryPlace.json")
   $('#example').DataTable( {
        "ajax": 'data/datatable.json'
    } );
@@ -89,7 +92,7 @@ function buildChart(){
   });
   };
 
-//pie chart starts here
+//pie chart starts here for races
 
   function loadData2(){
 
@@ -103,15 +106,15 @@ function buildChart(){
 
   function parseLine(race){
     // console.log(date);
-    console.log(date.deathRaces[0].Date);
+    console.log(date.deathRaces[0].Race);
 
-    date1 = ["Date"];
+    date1 = ["Race"];
 
 
-    $.each(date.deathDates, function(i, item){
+    $.each(date.deathRaces, function(i, item){
       // console.log(i);
       console.log(item);
-      date1.push(parseFloat(item.Date));
+      date1.push(parseFloat(item.Race));
       // data2.push(parseFloat(item.injuries));
 
 
@@ -130,37 +133,18 @@ function buildChart(){
   function buildChart2(){
     // console.log("buildChart2()");
     var chart = c3.generate({
-        bindto: '#chartLine',
+        bindto: '#chartPie',
         data: {
-          columns: [date1],
-          axes: {
-            Date: 'y2'
-          },
-          types: {
-            Date: 'line'
-          }
-        },
-        color: {
-          pattern: ['#a1b5ad']
-        },
-        axis: {
-          y: {
-            label: {
-              text: 'Y Label',
-              position: 'outer-middle'
-            },
-            tick: {
-              format: d3.format("$,") // ADD
-            }
-          },
-          y2: {
-            show: true,
-            label: {
-              text: 'Y2 Label',
-              position: 'outer-middle'
-            }
-          }
-        }
+        // iris data from R
+        columns: [
+            ['data1', 30],
+            ['data2', 120],
+        ],
+        type : 'pie',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    }
     });
     };
 
