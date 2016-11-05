@@ -16,6 +16,14 @@
     }
 }
 
+.navbar-brand>img {
+  width: 200px;
+  margin-top: -78px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .container-fluid {
   /*margin-left: 0px;
@@ -55,19 +63,62 @@ h5 {
   font-size: 10px;
 }
 
+
+.picred {
+  height: 300px;
+  width: 500px;
+  margin-left: 40px;
+}
+
+.pic {
+  margin-left: 20px;
+  height: 300px;
+  width: 500px;
+}
+
+div.soci {
+  margin-top: 20px;
+}
 .twitterblue {
   width: 30px;
   margin-left: 450px;
+  margin-top: 2px;
 }
 
 .facebookblue {
-  width: 30px;
-  margin-left: 200px;
+  width: 35px;
+  margin-left: 150px;
+  margin-top: -4px;
 }
 
 .mailblue {
   width: 30px;
-  margin-left: 10px;
+  margin-left: -150px;
+}
+
+@media screen and (max-width: 700px) {
+ .twitterblue{
+   margin-left: 100px;
+ }
+ .facebookblue {
+   margin-top: -4px;
+   margin-left: 40px;
+   width: 35px;
+ }
+ .mailblue {
+   margin-left: -5px;
+ }
+}
+
+div.standout {
+  background-color: #87a7c4;
+}
+
+div.chart2 {
+  height: 300px;
+}
+div.standout2 {
+  background-color: #87a7c4;
 }
 /*
 .twitterblack {
@@ -83,4 +134,16 @@ h5 {
 .mailblack {
   width: 30px;
   margin-left: 10px;
+}*/
+
+/*.scrollup{
+    width:40px;
+    height:40px;
+    opacity:0.3;
+    position:fixed;
+    bottom:50px;
+    right:100px;
+    display:none;
+    text-indent:-9999px;
+    background: url('icon_top.png') no-repeat;
 }*/

@@ -31,14 +31,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Los Angeles Times</a>
+      <a class="navbar-brand" href="http://www.latimes.com/"><img class="LA" src="images/LATimesLogoW.png"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <!-- <li class="active"><a href="#">Home</a></li> -->
         <li><a href="#">Local</a></li>
         <li><a href="#">California</a></li>
         <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Endorsements</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -49,6 +53,14 @@
 </nav>
   <div class="everything">
     <div class="row">
+      <div class="col-md-6 picred">
+        <img src="images/picred.png" class="picred">
+      </div>
+      <div class="col-md-6 pic">
+        <img src="images/pic.png" class="pic">
+      </div>
+    </div>
+    <div class="row soci">
       <div class="col-md-4 col-xs-4">
           <!-- <img class ="twitterblack" src="images/twitter-icon-black.png" alt="blacktwitter"> -->
           <img class ="twitterblue" src="images/twitter-icon-blue.png" alt="bluetwitter">
@@ -74,7 +86,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h4> by Caroline Boliek with info from Data.gov </h4>
+        <h4> by <a href="http://www.carolineboliek.com">Caroline Boliek</a> with info from <a href="https://www.data.gov">Data.gov</a> </h4>
       </div>
     </div>
     <div class="row">
@@ -85,25 +97,34 @@
 
     <div class="row">
       <div class="col-md-8">
-        <p>this is the map of the areas where the deaths occurred.</p>
+        <p>this is the range of ages of the people who died.</p>
       </div>
       <div class="col-md-4">
-        <p>This is my description of the map that will be to the left</p>
+        <p>As you can tell, there were many across the board, but the most common age was ___.</p>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 first">
+      <div class="col-md-9 first">
         <div id="chart"></div>
       </div>
+      <div class="col-md-3 standout">
+        <h3> Standout Cases </h3>
+        <p>In the month of January of 2015, there were 50 cases of deaths due to drug overdoses. Out of those 50 reported deaths, 36 of the victims were male.</p>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-9 chart2">
         <div id="chartLine"></div>
+      </div>
+      <div class="col-md-3 standout2">
+        <p>In the month of January of 2015, 14 of them were women</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <div id="chartPie"></div>
+      </div>
+      <div class="col-md-6">
         <div id="chartPie"></div>
       </div>
     </div>
@@ -157,8 +178,9 @@
         </tfoot>
     </table>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="http:////cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <!-- <a href="#" class="scrollup"><a href="http://www.jqueryscript.net/tags.php?/Scroll/">Scroll</a> -->
+
+
   </div>
 </div>
 
@@ -171,6 +193,8 @@
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="http:////cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
   <script src="js/d3.min.js" charset="utf-8"></script>
   <script src="js/c3.min.js"></script>
   <script src="js/scripts.js"></script>

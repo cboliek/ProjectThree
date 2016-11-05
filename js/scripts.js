@@ -10,10 +10,10 @@ var injuryPlaces;
 $( document ).ready(function() {
   console.log( "ready!" );
   loadData("age.json");
-  loadData3("drugs.json");
-  loadData4("ResidenceCity.json");
+  loadData3("data/drugs.json");
+  // loadData4("ResidenceCity.json");
   loadData2("race.json");
-  loadData5("InjuryPlace.json")
+  // loadData5("InjuryPlace.json");
   $('#example').DataTable( {
        "ajax": 'data/datatable.json'
    } );
@@ -69,7 +69,7 @@ function buildChart(){
         }
       },
       color: {
-        pattern: ['#c5aeb5']
+        pattern: ['#87a7c4']
       },
       axis: {
         y: {
@@ -106,14 +106,14 @@ function buildChart(){
 
   function parseLine(race){
     // console.log(date);
-    console.log(date.deathRaces[0].Race);
+    // console.log(race.deathRaces[0].Race);
 
     date1 = ["Race"];
 
 
-    $.each(date.deathRaces, function(i, item){
+    $.each(race.deathRaces, function(i, item){
       // console.log(i);
-      console.log(item);
+      // console.log(item);
       date1.push(parseFloat(item.Race));
       // data2.push(parseFloat(item.injuries));
 
@@ -150,83 +150,92 @@ function buildChart(){
 
     //pie chart for drugs starts here
 
-    // function loadData3(){
-    //
-    //   $.ajax({
-    //     method: "GET",
-    //     url: "data/drugs.json",
-    //     dataType: "JSON",
-    //     success: parsePie
-    //   });
-    // }
-    //
-    // function parsePie(date){
-    //   // console.log(date);
-    //   console.log(date.deathDates[0].Heroin);
-    //   console.log(date.deathDates[0].Cocaine);
-    //   console.log(date.deathDates[0].Fentanyl);
-    //   console.log(date.deathDates[0].Oxycodone);
-    //   console.log(date.deathDates[0].Oxymorphone);
-    //   console.log(date.deathDates[0].Other);
-    //   console.log(date.deathDates[0].Heroin);
-    //   console.log(date.deathDates[0].Heroin);
-    //   console.log(date.deathDates[0].Heroin);
-    //
-    //   date1 = ["Date"];
-    //
-    //
-    //   $.each(date.deathDates, function(i, item){
-    //     // console.log(i);
-    //     console.log(item);
-    //     date1.push(parseFloat(item.Date));
-    //     // data2.push(parseFloat(item.injuries));
-    //
-    //
-    //
-    //   })
-    //   // console.log(deathDates);
-    //
-    //   buildChart3();
-    //
-    // }
-    //
-    //
-    //
-    //
-    //
-    // function buildChart3(){
-    //   // console.log("buildChart2()");
-    //   var chart = c3.generate({
-    //       bindto: '#chartPie',
-    //       data: {
-    //         columns: [date1],
-    //         axes: {
-    //           Date: 'y2'
-    //         },
-    //         types: {
-    //           Date: 'line'
-    //         }
-    //       },
-    //       color: {
-    //         pattern: ['#a1b5ad']
-    //       },
-    //       axis: {
-    //         y: {
-    //           label: {
-    //             text: 'Y Label',
-    //             position: 'outer-middle'
-    //           },
-    //           tick: {
-    //             format: d3.format("$,") // ADD
-    //           }
-    //         },
-    //         y2: {
-    //           show: true,
-    //           label: {
-    //             text: 'Y2 Label',
-    //             position: 'outer-middle'
-    //           }
-    //         }
-    //       }
-    //   });
-    //   };
+    function loadData3(drugsURL){
+
+      $.ajax({
+        method: "GET",
+        url: drugsURL,
+        dataType: "JSON",
+        success: parsePie
+      });
+    }
+
+    function parsePie(date){
+      // console.log(date);
+      // console.log(date.deathDates[0].Heroin);
+      // console.log(date.deathDates[0].Cocaine);
+      // console.log(date.deathDates[0].Fentanyl);
+      // console.log(date.deathDates[0].Oxycodone);
+      // console.log(date.deathDates[0].Oxymorphone);
+      // console.log(date.deathDates[0].Other);
+      // console.log(date.deathDates[0].Heroin);
+      // console.log(date.deathDates[0].Heroin);
+      // console.log(date.deathDates[0].Heroin);
+
+      date1 = ["Date"];
+
+
+      $.each(date.deathDates, function(i, item){
+        // console.log(i);
+        // console.log(item);
+        date1.push(parseFloat(item.Date));
+        // data2.push(parseFloat(item.injuries));
+
+
+
+      })
+      // console.log(deathDates);
+
+      buildChart3();
+
+    }
+
+    function buildChart3(){
+      // console.log("buildChart2()");
+      var chart = c3.generate({
+          bindto: '#chartPie',
+          data: {
+            columns: [date1],
+            axes: {
+              Date: 'y2'
+            },
+            types: {
+              Date: 'line'
+            }
+          },
+          color: {
+            pattern: ['#a1b5ad']
+          },
+          axis: {
+            y: {
+              label: {
+                text: 'Y Label',
+                position: 'outer-middle'
+              },
+              tick: {
+                format: d3.format("$,") // ADD
+              }
+            },
+            y2: {
+              show: true,
+              label: {
+                text: 'Y2 Label',
+                position: 'outer-middle'
+              }
+            }
+          }
+      });
+      };
+
+      // $(window).scroll(function(){
+      //     if ($(this).scrollTop() > 100) {
+      //         $('.scrollup').fadeIn();
+      //     } else {
+      //         $('.scrollup').fadeOut();
+      //     }
+      // });
+      //
+      // $('.scrollup').click(function(){
+      //     $("html, body").animate({ scrollTop: 0 }, 600);
+      //     return false;
+      // });
