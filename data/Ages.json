@@ -1,0 +1,155 @@
+{
+  "deathAges":[
+  {
+    "Age": 24,
+    "ageFreq": 4
+  },
+
+  {
+    "Age": 25,
+    "ageFreq": 2
+  },
+
+  {
+    "Age": 26,
+    "ageFreq": 2
+  },
+
+  {
+    "Age": 27,
+    "ageFreq": 1
+  },
+  {
+    "Age": 28,
+    "ageFreq": 1
+  },
+  {
+    "Age": 29,
+    "ageFreq": 1
+  },
+  {
+    "Age": 31,
+    "ageFreq": 1
+  },
+  {
+    "Age": 33,
+    "ageFreq": 1
+  },
+  {
+    "Age": 34,
+    "ageFreq": 1
+  },
+  {
+    "Age": 36,
+    "ageFreq": 1
+  },
+  {
+    "Age": 37,
+    "ageFreq": 1
+  },
+  {
+    "Age": 38,
+    "ageFreq": 1
+  },
+  {
+    "Age": 39,
+    "ageFreq": 3
+  },
+
+  {
+    "Age": 41,
+    "ageFreq": 3
+  },
+
+  {
+    "Age": 43,
+    "ageFreq": 2
+  },
+
+  {
+    "Age": 44,
+    "ageFreq": 1
+  },
+  {
+    "Age": 45,
+    "ageFreq": 1
+  },
+  {
+    "Age": 46,
+    "ageFreq": 1
+  },
+  {
+    "Age": 49,
+    "ageFreq": 1
+  },
+  {
+    "Age": 50,
+    "ageFreq": 2
+  },
+
+  {
+    "Age": 51,
+    "ageFreq": 3
+  },
+
+  {
+    "Age": 52,
+    "ageFreq": 1
+  },
+  {
+    "Age": 53,
+    "ageFreq": 2
+  },
+
+  {
+    "Age": 54,
+    "ageFreq": 1
+  },
+  {
+    "Age": 55,
+    "ageFreq": 1
+  },
+  {
+    "Age": 57,
+    "ageFreq": 1
+  },
+  {
+    "Age": 58,
+    "ageFreq": 2
+  },
+
+  {
+    "Age": 59,
+    "ageFreq": 1
+  },
+  {
+    "Age": 62,
+    "ageFreq": 1
+  },
+  {
+    "Age": 65,
+    "ageFreq": 1
+  },
+  {
+    "Age": 67,
+    "ageFreq": 1
+  },
+  {
+    "Age": 69,
+    "ageFreq": 1
+  },
+  {
+    "Age": 70,
+    "ageFreq": 1
+  },
+  {
+    "Age": 71,
+    "ageFreq": 1
+  },
+  {
+    "Age": 72,
+    "ageFreq": 2
+  }
+
+]
+}

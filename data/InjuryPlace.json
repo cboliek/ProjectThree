@@ -1,4 +1,5 @@
-[
+{
+  "injuryPlaces":[
   {
     "InjuryPlace": "Residence"
   },
@@ -153,3 +154,4 @@
     "InjuryPlace": "Residence"
   }
 ]
+}

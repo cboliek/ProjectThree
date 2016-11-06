@@ -5,6 +5,7 @@
 .everything {
   /*background-color: #c5d8e6;*/
   background-color: white;
+
   /*margin-left: 65px;
   margin-right: 100px;*/
 }
@@ -21,6 +22,10 @@
   margin-top: -78px;
 }
 
+.navbar, .navbar-inverse {
+
+
+}
 .navbar-inverse .navbar-nav>li>a {
   font-family: 'Montserrat', sans-serif;
 }
@@ -67,13 +72,21 @@ h5 {
 .picred {
   height: 300px;
   width: 500px;
-  margin-left: 40px;
+  /*margin-left: 40px;*/
 }
 
 .pic {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   height: 300px;
   width: 500px;
+}
+
+@media screen and (max-width: 700px) {
+.picred, .pic {
+  height: 100px;
+  width: 100px;
+
+}
 }
 
 div.soci {
@@ -120,21 +133,36 @@ div.chart2 {
 div.standout2 {
   background-color: #87a7c4;
 }
-/*
+
+@media screen and (max-width: 700px) {
+  div.standout{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  div.standout2 {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
 .twitterblack {
-  width: 30px;
+  width: 20px;
   margin-left: 450px;
 }
 
 .facebookblack {
-  width: 30px;
+  width: 50px;
   margin-left: 200px;
 }
 
 .mailblack {
-  width: 30px;
+  width: 50px;
   margin-left: 10px;
-}*/
+}
+
+.img {
+  width: 30px;
+}
 
 /*.scrollup{
     width:40px;

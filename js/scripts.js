@@ -23,7 +23,7 @@ function loadData(){
 
   $.ajax({
     method: "GET",
-    url: "data/age.json",
+    url: "data/Ages.json",
     dataType: "JSON",
     success: parseData
   });
@@ -34,13 +34,14 @@ function parseData(data){
   // console.log(parseFloat(data.deathAges[0].Age));
 
   data1 = ["Age"];
+  data2 = ["ageFreq"];
 
 
   $.each(data.deathAges, function(i, item){
     // console.log(i);
     // console.log(item);
     data1.push(parseFloat(item.Age));
-    // data2.push(parseFloat(item.injuries));
+    data2.push(parseFloat(item.ageFreq));
 
 
 
@@ -60,26 +61,26 @@ function buildChart(){
   var chart = c3.generate({
       bindto: '#chart',
       data: {
-        columns: [data1],
+        columns: [data1, data2],
         axes: {
-          Age: 'y2'
+          ageFreq: 'y2'
         },
         types: {
-          Age: 'bar'
+          ageFreq: 'bar'
         }
       },
       color: {
-        pattern: ['#87a7c4']
+        pattern: ['#e0b8ba']
       },
       axis: {
         y: {
           label: {
             text: 'Y Label',
             position: 'outer-middle'
-          },
-          tick: {
-            format: d3.format("$,") // ADD
           }
+          // tick: {
+          //   format: d3.format("$,") // ADD
+          // }
         },
         y2: {
           show: true,
@@ -100,21 +101,23 @@ function buildChart(){
       method: "GET",
       url: "data/race.json",
       dataType: "JSON",
-      success: parseLine
+      success: parsePie
     });
   }
 
-  function parseLine(race){
+  function parsePie(race){
     // console.log(date);
     // console.log(race.deathRaces[0].Race);
 
     date1 = ["Race"];
+    date2 = ["raceFreq"]
 
 
     $.each(race.deathRaces, function(i, item){
       // console.log(i);
       // console.log(item);
       date1.push(parseFloat(item.Race));
+      date2.push(parseFloat(item.raceFreq));
       // data2.push(parseFloat(item.injuries));
 
 
@@ -133,13 +136,10 @@ function buildChart(){
   function buildChart2(){
     // console.log("buildChart2()");
     var chart = c3.generate({
-        bindto: '#chartPie',
+        bindto: '#chartPie1',
         data: {
         // iris data from R
-        columns: [
-            ['data1', 30],
-            ['data2', 120],
-        ],
+        columns: [date1, date2],
         type : 'pie',
         onclick: function (d, i) { console.log("onclick", d, i); },
         onmouseover: function (d, i) { console.log("onmouseover", d, i); },

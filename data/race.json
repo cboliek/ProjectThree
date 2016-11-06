@@ -2,157 +2,22 @@
   "deathRaces":[
 
     {
-      "Race": "White"
+      "Race": "White",
+      "raceFreq": 41
+    },
+
+    {
+      "Race": "Black",
+      "raceFreq": 6
     },
     {
-      "Race": "White"
+      "Race": "Unknown",
+      "raceFreq": 1
     },
     {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Black"
-    },
-    {
-      "Race": "Unknown"
-    },
-    {
-      "Race": "Hispanic, White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Hispanic, White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Black"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Black"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Black"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Black"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Hispanic, White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "Black"
-    },
-    {
-      "Race": "White"
-    },
-    {
-      "Race": "White"
+      "Race": "Hispanic, White",
+      "raceFreq": 3
     }
+
   ]
 }

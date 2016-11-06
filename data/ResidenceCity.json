@@ -1,10 +1,13 @@
-[
+{
+  "residenceCities":[
+
   {
     "Residence City": "SOUTH WINDSOR"
   },
   {
     "Residence City": "NEW BRITAIN"
   },
+
   {
     "Residence City": "BURLINGTON"
   },
