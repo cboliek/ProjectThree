@@ -68,6 +68,24 @@ h5 {
   font-size: 10px;
 }
 
+.picboth {
+  height: 300px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+@media screen and (max-width: 700px) {
+  .picboth {
+    height: 110px;
+    width: 390px;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .picred {
   height: 300px;
@@ -96,31 +114,77 @@ div.soci {
   width: 30px;
   margin-left: 450px;
   margin-top: 2px;
+  display: block;
 }
 
 .facebookblue {
-  width: 35px;
+  width: 37px;
   margin-left: 150px;
   margin-top: -4px;
+  display: block;
 }
 
 .mailblue {
   width: 30px;
   margin-left: -150px;
+  display: block;
 }
 
 @media screen and (max-width: 700px) {
  .twitterblue{
    margin-left: 100px;
+   display: block;
  }
  .facebookblue {
    margin-top: -4px;
    margin-left: 40px;
    width: 35px;
+   display: block;
  }
  .mailblue {
    margin-left: -5px;
+   display: block;
  }
+}
+
+.twitterblack {
+  width: 30px;
+  margin-left: 450px;
+  margin-top: 2px;
+  display: block;
+}
+
+.facebookblack {
+  width: 37px;
+  margin-left: 150px;
+  margin-top: -4px;
+  display: block;
+}
+
+.mailblack {
+  width: 30px;
+  margin-left: -150px;
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .twitterblack{
+    margin-left: 100px;
+    display: block;
+  }
+  .facebookblack {
+    margin-top: -4px;
+    margin-left: 40px;
+    width: 35px;
+    display: block;
+  }
+  .mailblack {
+    margin-left: -5px;
+    display: block;
+  }
+}
+.img {
+  width: 30px;
 }
 
 div.standout {
@@ -132,6 +196,7 @@ div.chart2 {
 }
 div.standout2 {
   background-color: #87a7c4;
+  margin-left: -10px;
 }
 
 @media screen and (max-width: 700px) {
@@ -145,25 +210,13 @@ div.standout2 {
   }
 }
 
-.twitterblack {
-  width: 20px;
-  margin-left: 450px;
+.issue {
+  border-bottom: 2pt solid black;
 }
 
-.facebookblack {
-  width: 50px;
-  margin-left: 200px;
+.datatab {
+  border-top: 2pt solid black;
 }
-
-.mailblack {
-  width: 50px;
-  margin-left: 10px;
-}
-
-.img {
-  width: 30px;
-}
-
 /*.scrollup{
     width:40px;
     height:40px;
@@ -175,6 +228,9 @@ div.standout2 {
     text-indent:-9999px;
     background: url('icon_top.png') no-repeat;
 }*/
+a {
+  color: #e60045;
+}
 a:hover {
-  color: #87a7c4;
+  color: #528fcc;
 }

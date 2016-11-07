@@ -9,10 +9,9 @@ var injuryPlaces;
 
 $( document ).ready(function() {
   console.log( "ready!" );
-  loadData("age.json");
-  loadData3("data/drugs.json");
-  // loadData4("ResidenceCity.json");
-  loadData2("race.json");
+  loadData();
+  loadData2();
+  loadData3();
   // loadData5("InjuryPlace.json");
   $('#example').DataTable( {
        "ajax": 'data/datatable.json',
@@ -46,7 +45,7 @@ function parseData(data){
 
 
 
-  })
+  });
   // console.log(deathAges);
 
   buildChart();
@@ -71,7 +70,7 @@ function buildChart(){
         }
       },
       color: {
-        pattern: ['#e0b8ba']
+        pattern: ['#c9797d', '#e0b8ba']
       },
       axis: {
         y: {
@@ -107,11 +106,12 @@ function buildChart(){
   }
 
   function parsePie(race){
-    // console.log(date);
+    console.log("In First Pie Chart");
+    // console.log(race);
     // console.log(race.deathRaces[0].Race);
 
     date1 = ["Race"];
-    date2 = ["raceFreq"]
+    date2 = ["raceFreq"];
 
 
     $.each(race.deathRaces, function(i, item){
@@ -123,7 +123,7 @@ function buildChart(){
 
 
 
-    })
+    });
 
 
     buildChart2();
@@ -147,21 +147,22 @@ function buildChart(){
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     }
     });
-    };
+    }
 
     //pie chart for drugs starts here
 
     function loadData3(){
-
       $.ajax({
         method: "GET",
         url: "data/ResidenceCity.json",
         dataType: "JSON",
-        success: parsePie
+        success: parseResidence
       });
+      // console.log("loadData3");
     }
 
-    function parsePie(residence){
+    function parseResidence(residence){
+      console.log("In Pie Chart Two");
       // console.log(date);
       // console.log(date.deathDates[0].Heroin);
       // console.log(date.deathDates[0].Cocaine);
@@ -194,7 +195,7 @@ function buildChart(){
     function buildChart3(){
       // console.log("buildChart2()");
       var chart = c3.generate({
-          bindto: '#chartPie',
+          bindto: '#chartCake',
           data: {
             columns: [datas1],
             axes: {
@@ -227,6 +228,101 @@ function buildChart(){
           }
       });
       };
+
+  //donut chart for injury place starts here
+  function loadData4(){
+
+    $.ajax({
+      method: "GET",
+      url: "data/ResidenceCity.json",
+      dataType: "JSON",
+      success: parseDonut
+    });
+  }
+
+  function parseDonut(injuryPlace){
+    // console.log(date);
+    // console.log(date.deathDates[0].Heroin);
+    // console.log(date.deathDates[0].Cocaine);
+    // console.log(date.deathDates[0].Fentanyl);
+    // console.log(date.deathDates[0].Oxycodone);
+    // console.log(date.deathDates[0].Oxymorphone);
+    // console.log(date.deathDates[0].Other);
+    // console.log(date.deathDates[0].Heroin);
+    // console.log(date.deathDates[0].Heroin);
+    // console.log(date.deathDates[0].Heroin);
+
+    datas1 = ["InjuryPlace"];
+    datas2 = ["placeFreq"];
+
+
+    $.each(datas1.injuryPlaces, function(i, item){
+      // console.log(i);
+      // console.log(item);
+      datas1.push(parseFloat(item.InjuryPlace));
+      datas1.push(parseFloat(item.placeFreq));
+      // data2.push(parseFloat(item.injuries));
+
+
+
+    })
+    // console.log(deathDates);
+
+    buildChart3();
+
+  }
+
+  function buildChart3(){
+    // console.log("buildChart2()");
+    var chart = c3.generate({
+        bindto: '#chartDonut',
+        data: {
+          columns: [datas1],
+          axes: {
+            Residence: 'y2'
+          },
+          types: {
+            Residence: 'line'
+          }
+        },
+        color: {
+          pattern: ['#a1b5ad']
+        },
+        axis: {
+          y: {
+            label: {
+              text: 'Y Label',
+              position: 'outer-middle'
+            },
+            // tick: {
+            //   format: d3.format("$,") // ADD
+            // }
+          },
+          y2: {
+            show: true,
+            label: {
+              text: 'Y2 Label',
+              position: 'outer-middle'
+            }
+          }
+        }
+    });
+    };
+      var chart = c3.generate({
+          data: {
+              columns: [
+                  ['datas1', 30],
+                  ['datas2', 120],
+              ],
+              type : 'donut',
+              onclick: function (d, i) { console.log("onclick", d, i); },
+              onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+              onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+          },
+          donut: {
+              title: "Iris Petal Width"
+          }
+      });
 
       // $(window).scroll(function(){
       //     if ($(this).scrollTop() > 100) {

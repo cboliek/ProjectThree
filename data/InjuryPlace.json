@@ -1,157 +1,38 @@
 {
   "injuryPlaces":[
   {
-    "InjuryPlace": "Residence"
+    "InjuryPlace": "Residence",
+    "placeFreq": 41
   },
+
   {
-    "InjuryPlace": "Residence"
+    "InjuryPlace": "Other",
+    "placeFreq": 5
   },
+
   {
-    "InjuryPlace": ""
+    "InjuryPlace": "Parking Lot",
+    "placeFreq": 2
   },
+
   {
-    "InjuryPlace": "Residence"
+    "InjuryPlace": "Automobile",
+    "placeFreq": 1
   },
+
   {
-    "InjuryPlace": "Residence"
+    "InjuryPlace": "Hotel or Motel",
+    "placeFreq": 1
   },
+
+
   {
-    "InjuryPlace": "Residence"
+    "InjuryPlace": "Driveway",
+    "placeFreq": 1
   },
-  {
-    "InjuryPlace": "Other"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Parking Lot"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Parking Lot"
-  },
-  {
-    "InjuryPlace": "Automobile"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Hotel or Motel"
-  },
-  {
-    "InjuryPlace": "Other"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Driveway"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Sidewalk"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Other"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  },
-  {
-    "InjuryPlace": "Residence"
-  }
+
+
+
+
 ]
 }
