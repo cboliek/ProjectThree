@@ -2,6 +2,24 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+.twittericon {
+   background-image: url('images/twitter-icon-black.png');
+   height: 160px;
+   width: 160px;
+   margin-bottom: 10px;
+   display: block;
+
+}
+
+.twittericon:hover {
+   background-image: url('images/twitter-icon-blue.png');
+
+}
+
+
+
+
+
 .everything {
   /*background-color: #c5d8e6;*/
   background-color: white;

@@ -1,6 +1,7 @@
 {
   "data":[
   [
+    "24",
     "White",
     "SOUTH WINDSOR",
     "Residence",
@@ -19,6 +20,7 @@
     ""
   ],
   [
+    "24",
     "White",
     "NEW BRITAIN",
     "Residence",
@@ -37,6 +39,7 @@
     "HYDROMORPH"
   ],
   [
+    "24",
     "White",
     "BURLINGTON",
     "",
@@ -55,6 +58,7 @@
     ""
   ],
   [
+    "24",
     "White",
     "MIDDLETOWN",
     "Residence",
@@ -73,6 +77,7 @@
     ""
   ],
   [
+    "25",
     "White",
     "BERLIN",
     "Residence",
@@ -91,6 +96,7 @@
     ""
   ],
   [
+    "25",
     "White",
     "MILFORD",
     "Residence",
@@ -109,6 +115,7 @@
     ""
   ],
   [
+    "26",
     "Black",
     "HAMDEN",
     "Other",
@@ -127,6 +134,7 @@
     ""
   ],
   [
+    "26",
     "Unknown",
     "HARTFORD",
     "Residence",
@@ -145,6 +153,7 @@
     ""
   ],
   [
+    "27",
     "Hispanic, White",
     "NEW HAVEN",
     "Residence",
@@ -163,6 +172,7 @@
     ""
   ],
   [
+    "28",
     "White",
     "THOMASTON",
     "Residence",
@@ -181,6 +191,7 @@
     ""
   ],
   [
+    "29",
     "Hispanic, White",
     "HARTFORD",
     "Residence",
@@ -199,6 +210,7 @@
     ""
   ],
   [
+    "31",
     "White",
     "WATERBURY",
     "Residence",
@@ -217,6 +229,7 @@
     ""
   ],
   [
+    "33",
     "White",
     "WATERBURY",
     "Residence",
@@ -235,6 +248,7 @@
     ""
   ],
   [
+    "34",
     "Black",
     "WATERBURY",
     "Residence",
@@ -253,6 +267,7 @@
     ""
   ],
   [
+    "36",
     "White",
     "GUILFORD",
     "Parking Lot",
@@ -271,6 +286,7 @@
     ""
   ],
   [
+    "37",
     "Black",
     "HARTFORD",
     "Residence",
@@ -289,6 +305,7 @@
     ""
   ],
   [
+    "38",
     "White",
     "TORRINGTON",
     "Residence",
@@ -307,6 +324,7 @@
     ""
   ],
   [
+    "39",
     "White",
     "NEW BRITAIN",
     "Residence",
@@ -325,6 +343,7 @@
     "BUPREN"
   ],
   [
+    "39",
     "White",
     "TORRINGTON",
     "Residence",
@@ -343,6 +362,7 @@
     ""
   ],
   [
+    "39",
     "White",
     "BRANFORD",
     "Parking Lot",
@@ -361,6 +381,7 @@
     ""
   ],
   [
+    "41",
     "White",
     "FAIRFIELD",
     "Automobile",
@@ -379,6 +400,7 @@
     ""
   ],
   [
+    "41",
     "White",
     "NEW LONDON",
     "Residence",
@@ -397,6 +419,7 @@
     ""
   ],
   [
+    "41",
     "White",
     "MILFORD",
     "Residence",
@@ -415,6 +438,7 @@
     ""
   ],
   [
+    "43",
     "White",
     "WATERBURY",
     "Residence",
@@ -433,6 +457,7 @@
     ""
   ],
   [
+    "43",
     "White",
     "NAPLES",
     "Hotel or Motel",
@@ -451,6 +476,7 @@
     "HYDROMORPH"
   ],
   [
+    "44",
     "White",
     "WILTON",
     "Other",
@@ -469,6 +495,7 @@
     ""
   ],
   [
+    "45",
     "Black",
     "WINDHAM",
     "Residence",
@@ -487,6 +514,7 @@
     ""
   ],
   [
+    "46",
     "White",
     "NEW HAVEN",
     "Residence",
@@ -505,6 +533,7 @@
     ""
   ],
   [
+    "49",
     "White",
     "BRISTOL",
     "Residence",
@@ -523,6 +552,7 @@
     ""
   ],
   [
+    "50",
     "White",
     "VERNON",
     "Residence",
@@ -541,6 +571,7 @@
     ""
   ],
   [
+    "50",
     "White",
     "ARLINGTON HEIGHTS",
     "Driveway",
@@ -559,6 +590,7 @@
     ""
   ],
   [
+    "51",
     "White",
     "WINSTED",
     "Residence",
@@ -577,6 +609,7 @@
     "MORPHINE RX"
   ],
   [
+    "51",
     "White",
     "CLINTON",
     "Residence",
@@ -595,6 +628,7 @@
     ""
   ],
   [
+    "51",
     "White",
     "WEST HAVEN",
     "Residence",
@@ -613,6 +647,7 @@
     "HYDROMORPH"
   ],
   [
+    "52",
     "White",
     "HARTFORD",
     "Sidewalk",
@@ -631,6 +666,7 @@
     ""
   ],
   [
+    "53",
     "White",
     "WILLIMANTIC",
     "Residence",
@@ -649,6 +685,7 @@
     ""
   ],
   [
+    "53",
     "White",
     "WATERBURY",
     "Residence",
@@ -667,6 +704,7 @@
     ""
   ],
   [
+    "54",
     "Black",
     "WINDSOR",
     "Residence",
@@ -685,6 +723,7 @@
     ""
   ],
   [
+    "55",
     "White",
     "OLD SAYBROOK",
     "Residence",
@@ -703,6 +742,7 @@
     ""
   ],
   [
+    "57",
     "White",
     "JEWETT CITY",
     "Residence",
@@ -721,6 +761,7 @@
     ""
   ],
   [
+    "58",
     "Hispanic, White",
     "WETHERSFIELD",
     "Residence",
@@ -739,6 +780,7 @@
     ""
   ],
   [
+    "58",
     "White",
     "ANSONIA",
     "Residence",
@@ -757,6 +799,7 @@
     ""
   ],
   [
+    "59",
     "White",
     "GROTON",
     "Residence",
@@ -775,6 +818,7 @@
     ""
   ],
   [
+    "62",
     "White",
     "ANDOVER",
     "Residence",
@@ -793,6 +837,7 @@
     ""
   ],
   [
+    "65",
     "White",
     "STRATFORD",
     "Other",
@@ -811,6 +856,7 @@
     ""
   ],
   [
+    "67",
     "White",
     "WINDSOR LOCKS",
     "Residence",
@@ -829,6 +875,7 @@
     ""
   ],
   [
+    "69",
     "White",
     "NORWICH",
     "Residence",
@@ -847,6 +894,7 @@
     ""
   ],
   [
+    "70",
     "White",
     "NEW BRITAIN",
     "Residence",
@@ -865,6 +913,7 @@
     ""
   ],
   [
+    "71",
     "Black",
     "BRIDGEPORT",
     "Residence",
@@ -883,6 +932,7 @@
     ""
   ],
   [
+    "72",
     "White",
     "NEW HAVEN",
     "Residence",
@@ -901,6 +951,7 @@
     "PCP, MORPHINE NOS"
   ],
   [
+    "72",
     "White",
     "WATERBURY",
     "Residence",

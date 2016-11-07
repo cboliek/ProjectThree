@@ -6,17 +6,18 @@ var injuryPlaces;
 
 
 
-
 $( document ).ready(function() {
   console.log( "ready!" );
-  loadData();
-  loadData2();
-  loadData3();
-  // loadData5("InjuryPlace.json");
   $('#example').DataTable( {
        "ajax": 'data/datatable.json',
        responsive: true
    } );
+
+   loadData();
+   loadData2();
+   loadData3();
+  //  loadData4();
+  //  loadData5();
 });
 
 function loadData(){
@@ -70,7 +71,7 @@ function buildChart(){
         }
       },
       color: {
-        pattern: ['#c9797d', '#e0b8ba']
+        pattern: ['#e0b8ba']
       },
       axis: {
         y: {
@@ -91,7 +92,37 @@ function buildChart(){
         }
       }
   });
-  };
+  }
+
+
+//pie chart for Residence
+
+var chart = c3.generate({
+    bindto:'#chartPie',
+    data: {
+        // iris data from R
+        columns: [
+            ['Heroin', 24],
+            ['Cocaine', 10],
+            ['Fentanyl', 4],
+            ['Oxycodone', 10],
+            ['EtOH', 5],
+            ['Hydrocodone', 4],
+            ['Benzodiazepine', 16],
+            ['Methadone', 9],
+            ['Amphet', 1],
+            ['Tramad', 1],
+            ['Morphine', 2]
+
+
+        ],
+        type : 'pie',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    }
+});
+
 
 //pie chart starts here for races
 
@@ -103,25 +134,23 @@ function buildChart(){
       dataType: "JSON",
       success: parsePie
     });
+    console.log("Loading Data for first Pie");
   }
 
   function parsePie(race){
-    console.log("In First Pie Chart");
-    // console.log(race);
+    console.log(race);
+    // console.log("here");
     // console.log(race.deathRaces[0].Race);
 
     date1 = ["Race"];
     date2 = ["raceFreq"];
 
-
     $.each(race.deathRaces, function(i, item){
       // console.log(i);
       // console.log(item);
-      date1.push(parseFloat(item.Race));
+      date1.push(item.Race);
       date2.push(parseFloat(item.raceFreq));
       // data2.push(parseFloat(item.injuries));
-
-
 
     });
 
@@ -139,63 +168,92 @@ function buildChart(){
     var chart = c3.generate({
         bindto: '#chartPie1',
         data: {
-        // iris data from R
-        columns: [date2],
-        type : 'pie',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-    }
+         // iris data from R
+         columns: [
+             ['white', 41],
+             ['black', 6],
+             ['hispanic/white', 3],
+             ['unknown', 1]
+         ],
+         type : 'pie',
+         onclick: function (d, i) { console.log("onclick", d, i); },
+         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+     },
+     color: {
+       pattern: ['blue', 'orange', 'pink', 'grey']
+     },
     });
-    }
+  }
 
     //pie chart for drugs starts here
 
     function loadData3(){
+
       $.ajax({
         method: "GET",
         url: "data/ResidenceCity.json",
         dataType: "JSON",
-        success: parseResidence
+        success: parseRes
       });
-      // console.log("loadData3");
+
+      console.log("Data for Pie 2");
     }
 
-    function parseResidence(residence){
-      console.log("In Pie Chart Two");
-      // console.log(date);
-      // console.log(date.deathDates[0].Heroin);
-      // console.log(date.deathDates[0].Cocaine);
-      // console.log(date.deathDates[0].Fentanyl);
-      // console.log(date.deathDates[0].Oxycodone);
-      // console.log(date.deathDates[0].Oxymorphone);
-      // console.log(date.deathDates[0].Other);
-      // console.log(date.deathDates[0].Heroin);
-      // console.log(date.deathDates[0].Heroin);
-      // console.log(date.deathDates[0].Heroin);
+    // function parseRes(resData) {
+    //   console.log("data in resData");
+    //   console.log(resData);
+    // }
 
-      datas1 = ["Residence"];
-
-
-      $.each(datas1.residenceCities, function(i, item){
-        // console.log(i);
-        // console.log(item);
-        datas1.push(parseFloat(item.ResidenceCity));
-        // data2.push(parseFloat(item.injuries));
-
-
-
-      })
-      // console.log(deathDates);
-
-      buildChart3();
-
+//BAR CHART - INJURY
+    var chart = c3.generate({
+      bindto: '#chartPie2',
+    data: {
+        columns: [
+            ['Residence', 41],
+            ['Parking Lot', 2],
+            ['Automobile', 1],
+            ['Hotel or Motel', 1],
+            ['Driveway', 1],
+            ['Other', 5]
+        ],
+        type: 'bar'
+    },
+    color: {
+      pattern: ['#c9797d', '#fae6d9', '#e8cfd1', '#e0b8ba', '#e8d4d1', '#ffd9c9']
+    },
+    bar: {
+        width: {
+            ratio: 0.5 // this makes bar width 50% of length between ticks
+        }
+        // or
+        //width: 100 // this makes bar width 100px
     }
+});
+
+    // function parseRes(residence){
+    //   console.log(residence);
+    //
+    //   datas1 = ["Residence"];
+    //
+    //
+    //   $.each(datas1.residenceCities, function(i, item){
+    //     console.log(i);
+    //     console.log(item);
+    //     datas1.push(parseFloat(item.ResidenceCity));
+    //     data2.push(parseFloat(item.injuries));
+    //
+    //   });
+    //   console.log(deathDates);
+    //
+    //   buildChart3();
+    //
+    // }
 
     function buildChart3(){
       // console.log("buildChart2()");
       var chart = c3.generate({
-          bindto: '#chartCake',
+          bindto: '#chartPie',
           data: {
             columns: [datas1],
             axes: {
@@ -228,101 +286,6 @@ function buildChart(){
           }
       });
       };
-
-  //donut chart for injury place starts here
-  function loadData4(){
-
-    $.ajax({
-      method: "GET",
-      url: "data/ResidenceCity.json",
-      dataType: "JSON",
-      success: parseDonut
-    });
-  }
-
-  function parseDonut(injuryPlace){
-    // console.log(date);
-    // console.log(date.deathDates[0].Heroin);
-    // console.log(date.deathDates[0].Cocaine);
-    // console.log(date.deathDates[0].Fentanyl);
-    // console.log(date.deathDates[0].Oxycodone);
-    // console.log(date.deathDates[0].Oxymorphone);
-    // console.log(date.deathDates[0].Other);
-    // console.log(date.deathDates[0].Heroin);
-    // console.log(date.deathDates[0].Heroin);
-    // console.log(date.deathDates[0].Heroin);
-
-    datas1 = ["InjuryPlace"];
-    datas2 = ["placeFreq"];
-
-
-    $.each(datas1.injuryPlaces, function(i, item){
-      // console.log(i);
-      // console.log(item);
-      datas1.push(parseFloat(item.InjuryPlace));
-      datas1.push(parseFloat(item.placeFreq));
-      // data2.push(parseFloat(item.injuries));
-
-
-
-    })
-    // console.log(deathDates);
-
-    buildChart3();
-
-  }
-
-  function buildChart3(){
-    // console.log("buildChart2()");
-    var chart = c3.generate({
-        bindto: '#chartDonut',
-        data: {
-          columns: [datas1],
-          axes: {
-            Residence: 'y2'
-          },
-          types: {
-            Residence: 'line'
-          }
-        },
-        color: {
-          pattern: ['#a1b5ad']
-        },
-        axis: {
-          y: {
-            label: {
-              text: 'Y Label',
-              position: 'outer-middle'
-            },
-            // tick: {
-            //   format: d3.format("$,") // ADD
-            // }
-          },
-          y2: {
-            show: true,
-            label: {
-              text: 'Y2 Label',
-              position: 'outer-middle'
-            }
-          }
-        }
-    });
-    };
-      var chart = c3.generate({
-          data: {
-              columns: [
-                  ['datas1', 30],
-                  ['datas2', 120],
-              ],
-              type : 'donut',
-              onclick: function (d, i) { console.log("onclick", d, i); },
-              onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-              onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-          },
-          donut: {
-              title: "Iris Petal Width"
-          }
-      });
 
       // $(window).scroll(function(){
       //     if ($(this).scrollTop() > 100) {
