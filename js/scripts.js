@@ -15,7 +15,8 @@ $( document ).ready(function() {
   loadData2("race.json");
   // loadData5("InjuryPlace.json");
   $('#example').DataTable( {
-       "ajax": 'data/datatable.json'
+       "ajax": 'data/datatable.json',
+       responsive: true
    } );
 });
 
@@ -123,7 +124,7 @@ function buildChart(){
 
 
     })
-    // console.log(deathDates);
+
 
     buildChart2();
 
@@ -139,7 +140,7 @@ function buildChart(){
         bindto: '#chartPie1',
         data: {
         // iris data from R
-        columns: [date1, date2],
+        columns: [date2],
         type : 'pie',
         onclick: function (d, i) { console.log("onclick", d, i); },
         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
@@ -150,17 +151,17 @@ function buildChart(){
 
     //pie chart for drugs starts here
 
-    function loadData3(drugsURL){
+    function loadData3(){
 
       $.ajax({
         method: "GET",
-        url: drugsURL,
+        url: "data/ResidenceCity.json",
         dataType: "JSON",
         success: parsePie
       });
     }
 
-    function parsePie(date){
+    function parsePie(residence){
       // console.log(date);
       // console.log(date.deathDates[0].Heroin);
       // console.log(date.deathDates[0].Cocaine);
@@ -172,13 +173,13 @@ function buildChart(){
       // console.log(date.deathDates[0].Heroin);
       // console.log(date.deathDates[0].Heroin);
 
-      date1 = ["Date"];
+      datas1 = ["Residence"];
 
 
-      $.each(date.deathDates, function(i, item){
+      $.each(datas1.residenceCities, function(i, item){
         // console.log(i);
         // console.log(item);
-        date1.push(parseFloat(item.Date));
+        datas1.push(parseFloat(item.ResidenceCity));
         // data2.push(parseFloat(item.injuries));
 
 
@@ -195,12 +196,12 @@ function buildChart(){
       var chart = c3.generate({
           bindto: '#chartPie',
           data: {
-            columns: [date1],
+            columns: [datas1],
             axes: {
-              Date: 'y2'
+              Residence: 'y2'
             },
             types: {
-              Date: 'line'
+              Residence: 'line'
             }
           },
           color: {

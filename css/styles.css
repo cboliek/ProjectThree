@@ -175,3 +175,6 @@ div.standout2 {
     text-indent:-9999px;
     background: url('icon_top.png') no-repeat;
 }*/
+a:hover {
+  color: #87a7c4;
+}
