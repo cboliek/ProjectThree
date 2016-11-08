@@ -234,9 +234,9 @@ h5 {
 
 .list {
   text-align: center;
-  border-top: 1pt solid black;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  border-top: 1pt solid grey;
+  /*margin-top: 20px;
+  margin-bottom: 10px;*/
 }
 
 div.pies {
