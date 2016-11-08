@@ -100,6 +100,7 @@ function buildChart(){
 var chart = c3.generate({
     bindto:'#chartPie',
     data: {
+
         // iris data from R
         columns: [
             ['Heroin', 24],
@@ -118,7 +119,11 @@ var chart = c3.generate({
         onclick: function (d, i) { console.log("onclick", d, i); },
         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    color: {
+      pattern: ['#1A1F2B', '#30395C', '#4A6491', '#85A5CC', '#D0E4F2']
     }
+
 });
 
 
@@ -179,7 +184,7 @@ var chart = c3.generate({
          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
      },
      color: {
-       pattern: ['blue', 'orange', 'pink', 'grey']
+       pattern: ['#567183', '#476279', '#2D4254', '#99B1BE']
      },
     });
   }
@@ -218,7 +223,7 @@ var chart = c3.generate({
         type: 'bar'
     },
     color: {
-      pattern: ['#c9797d', '#fae6d9', '#e8cfd1', '#e0b8ba', '#e8d4d1', '#ffd9c9']
+      pattern: ['#6494BF', '#1B2833', '#3C5973', '#3C5973', '#2F4559', '#99B1BE']
     },
     bar: {
         width: {
@@ -262,7 +267,7 @@ var chart = c3.generate({
             }
           },
           color: {
-            pattern: ['#a1b5ad']
+            pattern: ['#1A1F2B']
           },
           axis: {
             y: {

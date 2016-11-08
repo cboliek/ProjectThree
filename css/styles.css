@@ -2,22 +2,78 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-.twittericon {
-   background-image: url('images/twitter-icon-black.png');
-   height: 160px;
-   width: 160px;
-   margin-bottom: 10px;
-   display: block;
-
+@font-face {
+    font-family: 'LA Web Display Kis Bold';
+    src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.eot');
+    src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.eot?#iefix') format('embedded-opentype'),
+         url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.woff') format('woff'),
+         url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.twittericon:hover {
-   background-image: url('images/twitter-icon-blue.png');
-
+@font-face {
+    font-family: 'LA Web Display Kis Bold';
+    src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.eot');
+    src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.eot?#iefix') format('embedded-opentype'),
+         url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.woff') format('woff'),
+         url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/laheadline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+   font-family: 'LAHeadline-Regular';
+   src: url('http://graphics.latimes.com/static/fonts/laheadline-regular-webfont.eot');
+   src: url('http://graphics.latimes.com/static/fonts/laheadline-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://graphics.latimes.com/static/fonts/laheadline-regular-webfont.woff') format('woff'),
+        url('http://graphics.latimes.com/static/fonts/laheadline-regular-webfont.ttf') format('truetype'),
+        url('http://graphics.latimes.com/static/fonts/laheadline-regular-webfont.svg#LAHeadline-Regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
 
+@font-face {
+        font-family: 'Belizio Narrow SemiBold';
+        src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/belizio-narrow-semibold.eot');
+        src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/belizio-narrow-semibold.eot?#iefix') format('embedded-opentype'),
+             url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/belizio-narrow-semibold.woff') format('woff'),
+             url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.3.1/belizio-narrow-semibold.ttf') format('truetype');
+        font-weight:normal;
+        font-style:normal;
+    }
+
+    @font-face {
+            font-family: 'Benton Gothic Regular';
+            src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-regular.eot');
+            src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-regular.eot?#iefix') format('embedded-opentype'),
+                 url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-regular.woff') format('woff'),
+                 url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-regular.ttf') format('truetype');
+            font-weight:normal;
+            font-style:normal;
+        }
+
+        @font-face {
+                font-family: 'Benton Gothic Bold';
+                src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-bold.eot');
+                src: url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-bold.eot?#iefix') format('embedded-opentype'),
+                     url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-bold.woff') format('woff'),
+                     url('https://s3.amazonaws.com/latimes-datadesk-template/fonts/0.5.0/benton-gothic-bold.ttf') format('truetype');
+                font-weight:normal;
+                font-style:normal;
+            }
+
+
+.c3 text {
+  font-family: 'LA Web Display Kis Bold', Georgia, serif;
+}
 /*social icons start here*/
+
+div.soci {
+  display: inline-block;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 
 /*twitter*/
 
@@ -79,6 +135,11 @@
   display: inline-block;
 }
 
+@media screen and (min-width: 700px) {
+  .iconz {
+    margin-left: 77%;
+  }
+}
 .everything {
   /*background-color: #c5d8e6;*/
   background-color: white;
@@ -106,7 +167,7 @@
 
 }
 .navbar-inverse .navbar-nav>li>a {
-  font-family: 'Montserrat', sans-serif;
+  ffont-family: 'Benton Gothic Regular', Arial, serif;
 }
 
 .container-fluid {
@@ -115,7 +176,7 @@
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'LA Web Display Kis Bold', Georgia, serif;
   text-align: center;
   font-size: 40px;
   margin-top: 20px;
@@ -125,19 +186,24 @@ h1 {
 
 }
 
+h2 {
+  font-family: 'Benton Gothic Regular', Arial, serif;
+  font-size: 30px;
+}
+
 p, h3 {
 
   font-size: 18px;
   margin: 0 0 10px;
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Benton Gothic Regular', Arial, serif;
   text-align: center;
   margin-top: 30px;
 }
 
 h4 {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+ font-family: 'Benton Gothic Regular', Arial, serif;
   font-size: 15px;
 }
 
@@ -166,30 +232,24 @@ h5 {
   }
 }
 
-.picred {
-  height: 300px;
-  width: 500px;
-  /*margin-left: 40px;*/
+.list {
+  text-align: center;
+}
+li {
+  border-top: 1pt solid black;
+  margin-top: 10px;
 }
 
-.pic {
-  /*margin-left: 20px;*/
-  height: 300px;
-  width: 500px;
+div.pies {
+  margin-top: 60px;
 }
 
-@media screen and (max-width: 700px) {
-.picred, .pic {
-  height: 100px;
-  width: 100px;
-
+img {
+  margin-left: auto;
+  margin-right: auto;
 }
 }
-
-div.soci {
-  margin-top: 20px;
-}
-.twitterblue {
+/*.twitterblue {
   width: 30px;
   margin-left: 450px;
   margin-top: 2px;
@@ -261,20 +321,20 @@ div.soci {
     margin-left: -5px;
     display: block;
   }
-}
+}*/
 .img {
   width: 30px;
 }
 
 div.standout {
-  background-color: #87a7c4;
+  background-color: #6494BF;
 }
 
 div.chart2 {
   height: 300px;
 }
 div.standout2 {
-  background-color: #87a7c4;
+  background-color: #6494BF;
   margin-left: -10px;
 }
 
@@ -308,8 +368,8 @@ div.standout2 {
     background: url('icon_top.png') no-repeat;
 }*/
 a {
-  color: #e60045;
+  color: #FF5443;
 }
 a:hover {
-  color: #528fcc;
+  color: #4591B8;
 }
