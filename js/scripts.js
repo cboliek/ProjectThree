@@ -71,7 +71,7 @@ function buildChart(){
         }
       },
       color: {
-        pattern: ['#e0b8ba']
+        pattern: ['#4591B8', '#85A5CC']
       },
       axis: {
         y: {

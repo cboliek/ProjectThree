@@ -137,7 +137,7 @@ div.soci {
 
 @media screen and (min-width: 700px) {
   .iconz {
-    margin-left: 77%;
+    margin-left: 80%;
   }
 }
 .everything {
@@ -326,8 +326,14 @@ img {
   width: 30px;
 }
 
+#chart {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
 div.standout {
-  background-color: #6494BF;
+  background-color:
+#E6E6E6;
 }
 
 div.chart2 {
