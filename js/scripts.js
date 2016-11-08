@@ -107,12 +107,10 @@ var chart = c3.generate({
             ['Fentanyl', 4],
             ['Oxycodone', 10],
             ['EtOH', 5],
-            ['Hydrocodone', 4],
+            // ['Hydrocodone', 4],
             ['Benzodiazepine', 16],
             ['Methadone', 9],
-            ['Amphet', 1],
-            ['Tramad', 1],
-            ['Morphine', 2]
+            ['Other', 12]
 
 
         ],

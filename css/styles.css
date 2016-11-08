@@ -17,12 +17,73 @@
 }
 
 
+/*social icons start here*/
+
+/*twitter*/
+
+.twitter img {
+  height: 40px;
+  width: 40px;
+}
+
+.twitter img:last-child {
+  display: none;
+}
+
+.twitter:hover img:first-child {
+  display: none;
+}
+
+.twitter:hover img:last-child {
+  display: inline-block;
+}
+
+/*facebook*/
+
+.facebook img {
+  height: 40px;
+  width: 40px;
+}
+
+.facebook img:last-child {
+  display: none;
+}
 
 
+.facebook:hover img:first-child {
+  display: none;
+}
+
+.facebook:hover img:last-child {
+  display: inline-block;
+}
+
+
+/*mail*/
+
+.mail img {
+  height: 40px;
+  width: 40px;
+}
+
+.mail img:last-child {
+  display: none;
+}
+
+
+.mail:hover img:first-child {
+  display: none;
+}
+
+.mail:hover img:last-child {
+  display: inline-block;
+}
 
 .everything {
   /*background-color: #c5d8e6;*/
   background-color: white;
+  margin-left: 30px;
+  margin-right: 30px;
 
   /*margin-left: 65px;
   margin-right: 100px;*/
@@ -30,8 +91,8 @@
 
 @media screen and (max-width: 700px) {
     body {
-        /*margin-left: 20px;
-        margin-right: 20px;*/
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
